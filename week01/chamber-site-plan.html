@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Ezra Taft Brigham Essien">
+    <meta name="Description" content="">
+    <title>Chamber of Commerce Site Plan</title>
+    <link rel="stylesheet" href="styles/siteplan-base.css">
+    <link rel="stylesheet" href="styles/siteplan-larger.css">
+</head>
+<body>
+    <header>
+        <h1>Accra Chamber of Commerce Site Plan</h1>
+    </header>
+    <main>
+        <section id="site-name">
+            <h2>Site Name</h2>
+            <p>The  Chamber of Commerce</p>
+            <p>Reason: The name reflects the locality and the purpose of promoting local businesses and economic development.</p>
+        </section>
+        
+        <section id="site-purpose">
+            <h2>Site Purpose</h2>
+            <p>1. To promote local businesses and economic development.</p>
+            <p>2. To provide resources and support for businesses and entrepreneurs in the area.</p>
+        </section>
+        
+        <section id="scenarios">
+            <h2>Scenarios</h2>
+            <ol>
+                <li>What events will the chamber be holding this month that promote business-to-business networking?</li>
+                <li>Where can I find contact information for the chamber's board of directors?</li>
+                <li>What has been the population growth in the area?</li>
+            </ol>
+        </section>
+        
+        <section id="color-schema">
+            <h2>Color Schema</h2>
+            <p>Primary Color: #3366CC (Used for headings)</p>
+            <p>Secondary Color: #FF9900 (Used for accents)</p>
+        </section>
+        
+        <section id="typography">
+            <h2>Typography</h2>
+            <p>Heading Font: Arial, sans-serif</p>
+            <p>Body Font: Roboto, sans-serif</p>
+        </section>
+        
+        <section id="wireframe">
+            <h2>Wireframe</h2>
+            
+            <div class="grid-container">
+                <p>Mobile View:</p>
+                <img src="images/mobile.png" class="mobile"    alt="mobile view">
+                <p>Desktop View:</p>
+                <img src="images/Screen1.png" class="desktop" alt="desktop view">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>©️<span class="date"></span> 😇 Ezra Taft Brigham Essien 😇 Ghana</p>
+        <p id="lastModified"></p>   
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const yearSpan = document.querySelector('.date');
+    yearSpan.textContent = new Date().getFullYear();
+    const lastModifiedParagraph = document.getElementById('lastModified');
+    lastModifiedParagraph.textContent = "Last modification: " + document.lastModified;
+});
+    </script>
+</body>
+</html>
