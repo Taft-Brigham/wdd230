@@ -1,0 +1,105 @@
+
+
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: "Sedan SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+
+header {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: #ddd;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #032B44, #0078);
+}
+
+header img {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    vertical-align: middle; 
+}
+
+header span {
+    display: inline-block; 
+    margin-left: 10px; 
+    vertical-align: middle; 
+}
+
+nav ul {
+    background-color: #494957;
+    padding: 10px 0; 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+  }
+  
+  nav li {
+    display: inline; 
+    
+  }
+  
+  nav a {
+    color: #000; 
+    font-size: larger;
+    text-decoration: none; 
+    padding:  10px; 
+    
+    
+  }
+  
+  
+  nav a:hover {
+    background-color: #ddd; 
+  }
+  
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    margin: 0 50px 0 50px;
+    margin-bottom: 20px;
+    background: white;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card h2{
+    color: #fff;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+    background: linear-gradient(135deg, #2b5876, #4e4376);;
+}
+
+.card ul li{
+    list-style-type: none;
+}
+
+footer {
+    text-align: center;
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    color: #fff;
+    padding: 10px 0;
+}
+
+
+.date {
+    font-style: italic;
+}
+
+
