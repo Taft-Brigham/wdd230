@@ -20,6 +20,18 @@
         font-size: 40px;
         align-items: start;
     }
+    nav{
+        grid-template-rows: 1fr;
+    }
 
+    #menubutton {
+        display: none;
+    }
+    ul.links, ul.links.open{
+        display: flex;
+        justify-content: flex-end;
+
+    }
+    
 
 }

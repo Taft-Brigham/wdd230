@@ -66,6 +66,81 @@ nav {
     background-color: #ddd; 
     color: #000500;
   } 
+  #menubutton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 44px;
+    text-align: right;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    right: 2vw;
+  }
+
+  .active {
+	color: #58A4B0;
+}
+
+ /* Darker mode */
+ .dark-mode{
+    background:  #032B44;
+    color: white;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode h1 {
+    border-bottom: 2px solid white;
+}
+
+.dark-mode .card {
+    color: white;
+    background: linear-gradient(135deg, #032B44, #0078);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.dark-mode ul {
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 4px;
+}
+.dark-mode h1,
+.dark-mode h2 {
+    color: #fff;
+}
+
+.dark-mode ul {
+    background: #032B44;
+}
+
+.dark-mode h1 {
+    border-bottom: 2px solid #fff;
+}
+
+
+#menubutton::before {
+    content: " \2630 ";
+}
+
+#mode {
+	
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 44px;
+    text-align: right;
+    padding-top: 20px;
+    position: absolute;
+    top: 0;
+    left: 2vw;
+}
+
 
 .grid-container {
     margin: 1rem;
@@ -101,13 +176,24 @@ main h1{
     
 }
 
-.active {
-	color: #58A4B0;
-}
 
 .card ul li{
     list-style-type: none;
 } 
+#menubutton.open::before {
+    content: "\00D7";
+}
+nav{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+nav ul {
+    overflow: hidden;
+}
+nav.open{
+    grid-template-rows: 1fr;
+}
 .card ul, p{
     margin: 20px;
 }
