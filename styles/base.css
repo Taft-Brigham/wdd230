@@ -101,9 +101,9 @@ main h1{
     
 }
 
-/* .active {
+.active {
 	color: #58A4B0;
-} */
+}
 
 .card ul li{
     list-style-type: none;
