@@ -1,28 +1,25 @@
-@media (min-width: 768px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-
-    h1 {
-        grid-column: 1 / span 2;
-        border-bottom: 0.5px solid black;
-        margin: 0 50px 0 50px;
-    }
-
-    .learning-activities {
-        grid-column: 1 / span 1; 
-    }
-    .information {
-        grid-column: auto;
-    }
-    
+@media (min-width: 640px) {
+	nav ul {
+		display: flex;
+	}
+	nav ul li {
+		flex: 1 1 100%;
+	}
 }
 
-@media (max-width: 767px) {
-    .nav {
-        display: flex;
-        flex-direction: column;
+@media only  screen and (min-width: 640px) {
+    .grid-container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 10px;
     }
+    .grid-container .card{
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+    main h1{
+        font-size: 40px;
+        align-items: start;
+    }
+
 
 }
