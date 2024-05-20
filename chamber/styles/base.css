@@ -35,7 +35,7 @@ header {
 	justify-content: center;
 	padding: 20px;
 	border: 1px solid rgba(0, 0, 0, 0.1);
-    background-image: url(C:\Users\HP\Desktop\wdd230\chamber\images\logo-banner.jpg);
+    background-image: url(https://github.com/Taft-Brigham/wdd230/blob/main/chamber/images/logo-banner.jpg?raw=true);
     height: 150px;
     /* position: fixed; */
 }
