@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="A website about how resposnisve images work ">
+    <meta name="Author" content="Ezra Taft Brigham Essien">
+    <title>Responsive Images</title>
+    <link rel="stylesheet" href="styles/responsive-images.css">
+</head>
+<body>
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 500px)" srcset="images/hero-small.webp">
+                <source media="(max-width: 1000px)" srcset="images/hero-medium.webp">
+                <source media="(max-width: 500px)" srcset="images/hero-small.webp">
+                <img src="images/hero-large.webp" alt="The Accra Ghana Temple" width="1500" height="75">
+            </picture>
+        </div>
+    </main>
+    <script src="scripts/lazyload.js"></script>
+</body>
+</html>
+
+
