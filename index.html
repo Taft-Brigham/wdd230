@@ -20,8 +20,12 @@
 </head>
 <body>
     <header>
+        <picture>
+            <source media="(max-width: 150px)" srcset="images/profile-medium.webp">
+            <source media="(max-width: 100px)" srcset="images/profile-small.webp">
+            <img src="images/profile-Large.webp" alt="A picture of me">
+        </picture>
         
-        <img src="images/profile.jpg" alt="A picture of me">
         <h1><span>Ezra T. B. Essien</span></h1>
     </header>
     
@@ -36,35 +40,47 @@
     </nav>
     
         <main>
+            <div class="hero">
+                <picture>
+                    <source media="(max-width: 400px)" srcset="images/hero-small.webp">
+                    <source media="(max-width: 960px)" srcset="images/hero-medium.webp">
+                    <img src="images/hero-large.webp" alt="The Accra Ghana Temple" width="500" height="250">
+                </picture>
+                <div class="herolabel">
+                    <p>Accra Ghana Temple</p>
+                </div>
+            </div>
                 <h1>WDD 230: Web Frontend Development</h1>
             <div class="grid-container">
                 <section class="card">
                     <h2>Learning Activities</h2>
                     <ul>
                         <li>Week 01:<a href="week01/holygrail.html">Layout</a></li>
-                        <li>Week 01:<a href="https://codepen.io/Taft-Brigham/details/ZEZZGGV">Applied Javascript</a></li>
-                        <li>Week 01:<a href="week01/media-query.html">CSS Media Queries</a></li>
+                        <li><a href="https://codepen.io/Taft-Brigham/details/ZEZZGGV">Applied Javascript</a></li>
+                        <li><a href="week01/media-query.html">CSS Media Queries</a></li>
                          
                     </ul>
                     <ul>
                         <li>Week 02:<a href="week02/design.html">Design Principles</a></li>
-                        <li>Week 02:<a href="https://codepen.io/Taft-Brigham/pen/oNRvKWZ">Hamburger Menu</a></li>
-                        <li>Week 02:<a href="week02/bom.html">DOM Manipulation</a></li> 
+                        <li><a href="https://codepen.io/Taft-Brigham/pen/oNRvKWZ">Hamburger Menu</a></li>
+                        <li><a href="week02/bom.html">DOM Manipulation</a></li> 
                     </ul>
                     <ul>
                         <li>Week 03: <a href="week03/images/landscape.webp">WebP</a></li>
-                        <li>Week 03: <a href="week03/lazyload.html">Lazy loading</a></li>
-                        <li>Week 03: <a href="week03/responsive-images.html">Responsive Images</a></li>
+                        <li> <a href="week03/lazyload.html">Lazy loading</a></li>
+                        <li> <a href="week03/responsive-images.html">Responsive Images</a></li>
+                        <li> <a href="week03/bom.html">Web Storage Api</a></li>
                     </ul>
                 </section>
                 <section class="card">
                     <h2>Information</h2>
                     <p>Weather: </p>
                     <p>Clouds:</p>
-                    <p>Number of Visits: </p>
+                    <p><span class="label">Number of Visits: </span><span class="visits"></span></p>
                 </section>
             </div>
         </main>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d364.76933071341006!2d-0.19368409861550326!3d5.567570363088198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgh!4v1716345588564!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div id="mode">
             🌓
         </div>
