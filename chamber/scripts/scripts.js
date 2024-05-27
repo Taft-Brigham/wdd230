@@ -17,18 +17,6 @@ hamButton.addEventListener('click', () => {
 	hamButton.classList.toggle('open');
 });
 
-// const modeButton = document.querySelector("#mode");
-// const main = document.querySelector("main");
-
-// modeButton.addEventListener("click", () => {
-//     main.classList.toggle("dark-mode");
-//     if (modeButton.textContent.includes("🌓")) {
-//         modeButton.textContent = "🌗";
-//     } else {
-//         modeButton.textContent = "🌓";
-//     }
-// });
-
 
 let currentIndex = 0;
 
@@ -62,32 +50,38 @@ setInterval(nextSlide, 3000);
 document.querySelector('.next').addEventListener('click', nextSlide);
 document.querySelector('.prev').addEventListener('click', prevSlide);
 
-// let slideIndex = 0;
-// showSlides();
 
-// function showSlides() {
-//     const slides = document.querySelectorAll('.slide');
-//     for (let i = 0; i < slides.length; i++) {
-//         slides[i].style.display = 'none';
-//     }
-//     slideIndex++;
-//     if (slideIndex > slides.length) { slideIndex = 1; }
-//     slides[slideIndex - 1].style.display = 'block';
-//     setTimeout(showSlides, 3000); // Change image every 3 seconds
-// }
+document.addEventListener('DOMContentLoaded', function () {
+    const visitMessage = document.getElementById('visit-message');
+    const lastVisit = localStorage.getItem('lastVisit');
+    const currentVisit = Date.now();
 
-// function nextSlide() {
-//     const slides = document.querySelectorAll('.slide');
-//     slides[slideIndex - 1].style.display = 'none';
-//     slideIndex++;
-//     if (slideIndex > slides.length) { slideIndex = 1; }
-//     slides[slideIndex - 1].style.display = 'block';
-// }
+    if (lastVisit) {
+        const daysBetween = Math.floor((currentVisit - lastVisit) / (1000 * 60 * 60 * 24));
+        if (daysBetween < 1) {
+            visitMessage.textContent = "Back so soon! Awesome!";
+        } else if (daysBetween === 1) {
+            visitMessage.textContent = "You last visited 1 day ago.";
+        } else {
+            visitMessage.textContent = `You last visited ${daysBetween} days ago.`;
+        }
+    } else {
+        visitMessage.textContent = "Welcome! Let us know if you have any questions.";
+    }
 
-// function prevSlide() {
-//     const slides = document.querySelectorAll('.slide');
-//     slides[slideIndex - 1].style.display = 'none';
-//     slideIndex--;
-//     if (slideIndex < 1) { slideIndex = slides.length; }
-//     slides[slideIndex - 1].style.display = 'block';
-// }
+    localStorage.setItem('lastVisit', currentVisit);
+
+    const lazyImages = document.querySelectorAll('img.lazy');
+    const lazyLoad = function () {
+        lazyImages.forEach(function (img) {
+            if (img.getBoundingClientRect().top < window.innerHeight) {
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+            }
+        });
+    };
+
+    lazyLoad();
+    document.addEventListener('scroll', lazyLoad);
+});
+

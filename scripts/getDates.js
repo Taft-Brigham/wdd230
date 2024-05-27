@@ -57,3 +57,4 @@ numVisits++;
 //store the new visit total into localStorage, key=numVisits-ls
 localStorage.setItem("numVisits-ls", numVisits);
 
+// <------------------js for dicovery page --------------------------->
